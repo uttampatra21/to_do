@@ -1,6 +1,13 @@
 const input = document.querySelector("#input");
 const lists = document.querySelector(".lists");
-
+const data = document.querySelector("main");
+data.innerHTML = `
+<div class="container">
+            <input type="text" id="input" placeholder="Create your lists">
+            <ul class="lists">  
+            </ul>
+        </div>
+`;
 input.addEventListener("keyup",function(event){
     if(event.key == "Enter"){
        toDo(this.value);
